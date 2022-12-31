@@ -17,7 +17,7 @@ defmodule NestedLiveviewForBugWeb.Router do
   scope "/", NestedLiveviewForBugWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", PageLive, :home
   end
 
   # Other scopes may use custom stacks.
@@ -27,7 +27,6 @@ defmodule NestedLiveviewForBugWeb.Router do
 
   # Enable Swoosh mailbox preview in development
   if Application.compile_env(:nested_liveview_for_bug, :dev_routes) do
-
     scope "/dev" do
       pipe_through :browser
 

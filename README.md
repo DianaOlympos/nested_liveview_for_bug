@@ -1,18 +1,14 @@
-# NestedLiveviewForBug
+# NestedLiveviewDynamicBug
 
-To start your Phoenix server:
+This repo is a minimal repro of a bug with assign_new inside for child liveviews added dynamically.
 
-  * Install dependencies with `mix deps.get`
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+To check it, follow the steps:
+
+* Install dependencies with `mix deps.get`
+* Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+You should see a component saying "Rendered statically, the title is:: passed through assigns"
 
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+After clicking the Submit button, you should see another saying "Added dynamically, the title is:not through assign_new "
